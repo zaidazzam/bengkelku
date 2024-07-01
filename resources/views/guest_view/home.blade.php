@@ -231,127 +231,7 @@
         </div>
     </div>
 
-    <!-- <div class="section ">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="section-heading">
-                <h6>| Best Deal</h6>
-                <h2>Find Your Best Deal Right Now!</h2>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="tabs-content">
-                <div class="row">
-                  <div class="nav-wrapper ">
-                    <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="appartment-tab" data-bs-toggle="tab"
-                          data-bs-target="#appartment" type="button" role="tab" aria-controls="appartment"
-                          aria-selected="true">Appartment</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa" type="button"
-                          role="tab" aria-controls="villa" aria-selected="false">Villa House</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="penthouse-tab" data-bs-toggle="tab" data-bs-target="#penthouse"
-                          type="button" role="tab" aria-controls="penthouse" aria-selected="false">Penthouse</button>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="appartment" role="tabpanel" aria-labelledby="appartment-tab">
-                      <div class="row">
-                        <div class="col-lg-3">
-                          <div class="info-table">
-                            <ul>
-                              <li>Total Flat Space <span>185 m2</span></li>
-                              <li>Floor number <span>26th</span></li>
-                              <li>Number of rooms <span>4</span></li>
-                              <li>Parking Available <span>Yes</span></li>
-                              <li>Payment Process <span>Bank</span></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <img src="assets/images/deal-01.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3">
-                          <h4>Extra Info About Property</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
-                            labore et dolore magna aliqua quised ipsum suspendisse.
-                            <br><br>When you need free CSS templates, you can simply type TemplateMo in any search engine
-                            website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.</p>
-                          <div class="icon-button">
-                            <a href="#"><i class="fa fa-calendar"></i> Pesan Sekarang</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="villa" role="tabpanel" aria-labelledby="villa-tab">
-                      <div class="row">
-                        <div class="col-lg-3">
-                          <div class="info-table">
-                            <ul>
-                              <li>Total Flat Space <span>250 m2</span></li>
-                              <li>Floor number <span>26th</span></li>
-                              <li>Number of rooms <span>5</span></li>
-                              <li>Parking Available <span>Yes</span></li>
-                              <li>Payment Process <span>Bank</span></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <img src="assets/images/deal-02.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3">
-                          <h4>Detail Info About Villa</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
-                            labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee.
-                            JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo
-                            after messenger poutine next level humblebrag swag franzen.</p>
-                          <div class="icon-button">
-                            <a href="#"><i class="fa fa-calendar"></i> Pesan Sekarang</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="penthouse" role="tabpanel" aria-labelledby="penthouse-tab">
-                      <div class="row">
-                        <div class="col-lg-3">
-                          <div class="info-table">
-                            <ul>
-                              <li>Total Flat Space <span>320 m2</span></li>
-                              <li>Floor number <span>34th</span></li>
-                              <li>Number of rooms <span>6</span></li>
-                              <li>Parking Available <span>Yes</span></li>
-                              <li>Payment Process <span>Bank</span></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <img src="assets/images/deal-03.jpg" alt="">
-                        </div>
-                        <div class="col-lg-3">
-                          <h4>Extra Info About Penthouse</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
-                            labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee.
-                            JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo
-                            after messenger poutine next level humblebrag swag franzen.</p>
-                          <div class="icon-button">
-                            <a href="#"><i class="fa fa-calendar"></i> Pesan Sekarang</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+
 
     <div class="contact section">
         <div class="container">
@@ -369,10 +249,10 @@
     <div class="contact-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-12">
                     <div id="map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12469.776493332698!2d-80.14036379941481!3d25.907788681148624!2m3!1f357.26927939317244!2f20.870722720054623!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e1!3m2!1sen!2sth!4v1642869952544!5m2!1sen!2sth"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.0908230582827!2d109.28013677528575!3d-7.455204173477224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655b239b9985a7%3A0xe0843b416a69233c!2sBENGKEL%20SANTOSA%20MOTOR!5e0!3m2!1sid!2sid!4v1716043334794!5m2!1sid!2sid"
                             width="100%" height="500px" frameborder="0"
                             style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"
                             allowfullscreen=""></iframe>
@@ -391,44 +271,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5">
-                    <form id="contact-form" action="" method="post">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="name">Nama Lengkap</label>
-                                    <input type="name" name="name" id="name" placeholder="Nama ..."
-                                        autocomplete="on" required>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="email">Email</label>
-                                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                        placeholder="E-mail..." required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="subject">Subjek</label>
-                                    <input type="subject" name="subject" id="subject" placeholder="Subjek..."
-                                        autocomplete="on">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="message">Pesan</label>
-                                    <textarea name="message" id="message" placeholder="Pesan"></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="orange-button">Kirim</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

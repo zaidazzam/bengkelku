@@ -19,7 +19,7 @@
                     @if ($sparepart->isEmpty())
                         <div class="alert alert-danger" role="alert">
                             <h4 class="alert-heading text-center">Tidak Ada Sparepart</h4>
-                            <p class="text-center">Tidak Ada Sparepart</p>
+                            <p class="text-center">Data Kosong</p>
                         </div>
                     @else
                         <!-- table -->

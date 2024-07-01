@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\Sparepart;
 use App\Models\User;
 use App\Models\Vehicle;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -143,6 +144,11 @@ class HomeController extends Controller
     {
         $sparepart = Sparepart::all();
         return view('homepage_view.sparepart', compact('sparepart'));
+    }
+    public function artikel()
+    {
+        $artikel = Blog::all();
+        return view('homepage_view.artikel', compact('artikel'));
     }
 
     public function invoice()

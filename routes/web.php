@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function () {
     // Home Routes
     Route::get('/home/orderlist', [App\Http\Controllers\HomeController::class, 'orderlist'])->name('home.orderlist');
     Route::get('/home/sparepart', [App\Http\Controllers\HomeController::class, 'sparepart'])->name('home.sparepart');
+    Route::get('/home/artikel', [App\Http\Controllers\HomeController::class, 'artikel'])->name('home.artikel');
     Route::get('/home/kendraan', [App\Http\Controllers\HomeController::class, 'kendaraan'])->name('home.daftar_kendaraan');
     Route::get('/home/invoice', [App\Http\Controllers\HomeController::class, 'invoice'])->name('home.invoice');
     Route::get('/home/invoiceUser/{id}', [App\Http\Controllers\HomeController::class, 'invoiceUser'])->name('home.invoiceUser');
@@ -41,6 +42,9 @@ Route::middleware('auth')->group(function () {
 
     // Sparepart Routes
     Route::resource('sparepart', App\Http\Controllers\SparepartController::class);
+
+    // Arikel Routes
+    Route::resource('artikel', App\Http\Controllers\BlogController::class);
 
     // Vehicle Routes
     Route::resource('vehicle', App\Http\Controllers\VehicleController::class);

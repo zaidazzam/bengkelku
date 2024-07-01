@@ -14,7 +14,6 @@ class GuestController extends Controller
     public function harga(){
         return view('guest_view.harga');
 
-
     }
     public function contact(){
 

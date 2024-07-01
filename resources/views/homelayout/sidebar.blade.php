@@ -60,8 +60,8 @@
                     <span>Artikel</span>
                 </p>
                 <li class="nav-item w-100">
-                    <a class="nav-link {{ request()->is('home/sparepart') ? 'active' : '' }}"
-                        href="{{ route('home.sparepart') }}">
+                    <a class="nav-link {{ request()->is('home/artikel') ? 'active' : '' }}"
+                        href="{{ route('home.artikel') }}">
                         <i class="fa-brands fa-blogger-b"></i>
                         <span class="ml-3 item-text">Daftar Artikel</span>
                     </a>
