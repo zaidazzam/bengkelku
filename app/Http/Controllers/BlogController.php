@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class BlogController extends Controller
 {
@@ -35,23 +37,24 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        // Validation
         $request->validate([
             'judul' => 'required|string',
-            'kategori' => 'required|string',
             'deskripsi' => 'required|string',
+            'kategori' => 'required|string',
             'image' => 'image|mimes:svg,jpeg,png,jpg,gif|max:5000', // Example validation rule for image uploads
         ]);
         $rekomendasi = new Blog([
             'judul' => $request->judul,
-            'kategori' => $request->judul,
+            'kategori' => $request->kategori,
             'deskripsi' => $request->deskripsi,
         ]);
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('gambar-artikel', 'public');
+            $imagePath = $request->file('image')->store('gambarartikel', 'public');
             $rekomendasi->image = $imagePath;
         }
         $rekomendasi->save();
-        return redirect()->route('/home/artikel')->with('success', 'Arikel/Tips beras.');
+        return redirect('/home/artikel')->with('success', 'Artikel saved!');
     }
 
     /**
@@ -60,9 +63,9 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show(Blog $id)
     {
-        //
+
     }
 
     /**
@@ -83,10 +86,36 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, $id)
     {
-        //
+        // Validasi input
+        $request->validate([
+            'judul' => 'required|string',
+            'deskripsi' => 'required|string',
+            'kategori' => 'required|string',
+            'image' => 'image|mimes:svg,jpeg,png,jpg,gif|max:5000', // Example validation rule for image uploads
+        ]);
+
+        // Ambil blog yang ingin diupdate
+        $rekomendasi = Blog::findOrFail($id);
+
+        // Update data blog
+        $rekomendasi->judul = $request->judul;
+        $rekomendasi->deskripsi = $request->deskripsi;
+        $rekomendasi->kategori = $request->kategori;
+
+        // Jika ada file gambar baru diupload, update path gambarnya
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('gambarartikel', 'public');
+            $rekomendasi->image = $imagePath;
+        }
+
+        // Simpan perubahan
+        $rekomendasi->save();
+
+        return redirect('/home/artikel')->with('success', 'Artikel updated!');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -94,8 +123,9 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
+    public function destroy(Blog $artikel)
     {
-        //
+        $artikel->delete();
+        return redirect('/home/artikel')->with('success', 'artikel/tips deleted!');
     }
 }

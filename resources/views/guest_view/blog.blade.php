@@ -24,98 +24,40 @@
           <a class="is_active" href="#!" data-filter="*">Semua</a>
         </li>
         <li>
-          <a href="#!" data-filter=".blog">Blog / Artikel</a>
+          <a href="#!" data-filter=".artikel">Blog / Artikel</a>
         </li>
         <li>
           <a href="#!" data-filter=".tips">Tips & Trick</a>
         </li>
       </ul>
       <div class="row properties-box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 blog">
-          <div class="item align-items-center">
-            <a href="#"><img src="assets/images/blog.png" alt="Gambar Ilustrasi"></a>
-            <div class=" d-flex justify-content-between">
-              <span class="category">Blog / Artikel</span>
-              <h6 class="fs-6">26 May 2024</h6>
+        @foreach ($artikel as $artikel)
+            <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 {{ $artikel->kategori }}">
+                <div class="item align-items-center">
+                    <a href="{{ route('artikel-detail', ['id' => $artikel->id]) }}"><img src="{{ asset('storage/' . $artikel->image) }}"  style="width: 100%;" alt="Gambar Ilustrasi"></a>
+                    <div class="d-flex justify-content-between">
+                        <span class="category">
+                            @if ($artikel->kategori == 'artikel')
+                                Blog / Artikel
+                            @elseif ($artikel->kategori == 'tips')
+                                Tips & Trick
+                            @endif
+                        </span>
+                        <span class="category ms-4">{{ \Carbon\Carbon::parse($artikel->created_at)->translatedFormat('d F Y', 'id') }}</span>
+                    </div>
+                    <h4 class="text-capitalize mb-3"><a href="{{ route('artikel-detail', ['id' => $artikel->id]) }}">{{ $artikel->judul }}</a></h4>
+                    <p class="mb-4 border-bottom pb-3">
+                        {{ \Illuminate\Support\Str::limit($artikel->deskripsi, 200, '...') }}
+                    </p>
+                                        <div class="main-button">
+                        <a href="{{ route('artikel-detail', ['id' => $artikel->id]) }}" class="btn btn-primary">Baca
+                            Selengkapnya</a>
+                    </div>
+                </div>
             </div>
-            <h4 class="text-capitalize mb-3"><a href="#">mengapa harus service rutin?</a></h4>
-            <p class="mb-4 border-bottom pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur pariatur optio atque, quibusdam ab fugiat perferendis sint ipsa voluptatum rem odio, eius similique tenetur minus voluptatem perspiciatis illum ullam magnam.</p>
-            <div class="main-button">
-              <a href="blog-detail.html">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 tips">
-          <div class="item align-items-center">
-            <a href="#"><img src="assets/images/tips.png" alt="Gambar Ilustrasi"></a>
-            <div class=" d-flex justify-content-between">
-              <span class="category">Tips & Trick</span>
-              <h6 class="fs-6">26 May 2024</h6>
-            </div>
-            <h4 class="text-capitalize mb-3"><a href="#">mengapa harus service rutin?</a></h4>
-            <p class="mb-4 border-bottom pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur pariatur optio atque, quibusdam ab fugiat perferendis sint ipsa voluptatum rem odio, eius similique tenetur minus voluptatem perspiciatis illum ullam magnam.</p>
-            <div class="main-button">
-              <a href="blog-detail.html">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 blog">
-          <div class="item align-items-center">
-            <a href="#"><img src="assets/images/blog.png" alt="Gambar Ilustrasi"></a>
-            <div class=" d-flex justify-content-between">
-              <span class="category">Blog / Artikel</span>
-              <h6 class="fs-6">26 May 2024</h6>
-            </div>
-            <h4 class="text-capitalize mb-3"><a href="#">mengapa harus service rutin?</a></h4>
-            <p class="mb-4 border-bottom pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur pariatur optio atque, quibusdam ab fugiat perferendis sint ipsa voluptatum rem odio, eius similique tenetur minus voluptatem perspiciatis illum ullam magnam.</p>
-            <div class="main-button">
-              <a href="blog-detail.html">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 tips">
-          <div class="item align-items-center">
-            <a href="#"><img src="assets/images/tips.png" alt="Gambar Ilustrasi"></a>
-            <div class=" d-flex justify-content-between">
-              <span class="category">Tips & Trick</span>
-              <h6 class="fs-6">26 May 2024</h6>
-            </div>
-            <h4 class="text-capitalize mb-3"><a href="#">mengapa harus service rutin?</a></h4>
-            <p class="mb-4 border-bottom pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur pariatur optio atque, quibusdam ab fugiat perferendis sint ipsa voluptatum rem odio, eius similique tenetur minus voluptatem perspiciatis illum ullam magnam.</p>
-            <div class="main-button">
-              <a href="blog-detail.html">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 blog">
-          <div class="item align-items-center">
-            <a href="#"><img src="assets/images/blog.png" alt="Gambar Ilustrasi"></a>
-            <div class=" d-flex justify-content-between">
-              <span class="category">Blog / Artikel</span>
-              <h6 class="fs-6">26 May 2024</h6>
-            </div>
-            <h4 class="text-capitalize mb-3"><a href="#">mengapa harus service rutin?</a></h4>
-            <p class="mb-4 border-bottom pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur pariatur optio atque, quibusdam ab fugiat perferendis sint ipsa voluptatum rem odio, eius similique tenetur minus voluptatem perspiciatis illum ullam magnam.</p>
-            <div class="main-button">
-              <a href="blog-detail.html">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 tips">
-          <div class="item align-items-center">
-            <a href="#"><img src="assets/images/tips.png" alt="Gambar Ilustrasi"></a>
-            <div class=" d-flex justify-content-between">
-              <span class="category">Tips & Trick</span>
-              <h6 class="fs-6">26 May 2024</h6>
-            </div>
-            <h4 class="text-capitalize mb-3"><a href="#">mengapa harus service rutin?</a></h4>
-            <p class="mb-4 border-bottom pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur pariatur optio atque, quibusdam ab fugiat perferendis sint ipsa voluptatum rem odio, eius similique tenetur minus voluptatem perspiciatis illum ullam magnam.</p>
-            <div class="main-button">
-              <a href="blog-detail.html">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        @endforeach
+    </div>
+
     </div>
   </div>
 @endsection

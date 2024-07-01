@@ -5,8 +5,8 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Edit Vehicle</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <span
-                    aria-hidden="true">&times;</span>
-            </button>
+                        aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 <form action="" method="POST" id="editForm" name="editForm">
@@ -46,8 +46,9 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Edit Status</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <span
-                    aria-hidden="true">&times;</span>
-            </button>            </div>
+                        aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <div class="modal-body">
                 <form action="" method="POST" id="editFormBooking" name="editFormBooking">
                     @csrf
@@ -101,3 +102,5 @@
         </div>
     </div>
 </div>
+
+

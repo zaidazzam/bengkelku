@@ -12,7 +12,7 @@
                     <ul class="nav">
                         <li><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Beranda</a></li>
                         <li><a class="nav-link {{ Request::is('harga') ? 'active' : '' }}" href="{{ route('harga') }}">Harga</a></li>
-                        <li><a class="nav-link {{ Request::is('artikel') ? 'active' : '' }}" href="{{ route('artikel') }}">Blog</a></li>
+                        <li><a class="nav-link {{ Request::is('artikel-tips') ? 'active' : '' }}" href="{{ route('artikel-tips') }}">Blog</a></li>
                         <li><a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Kontak</a></li>
                         <li><a class="nav-link {{ Request::is('login') ? 'active' : '' }}" href="{{ route('login') }}"><i class="fa fa-calendar"></i> Booking Service</a></li>
                     </ul>

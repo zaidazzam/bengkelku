@@ -31,20 +31,20 @@
             <div class="col-lg-12">
               <div class="item phone">
                 <img src="assets/images/phone-icon.png" alt="Gambar Ilustrasi" style="max-width: 52px;">
-                <h6>xxxxxxxxxx<br><span>Telepon</span></h6>
+                <h6 class="text-linked"><a href="https://api.whatsapp.com/send?phone=085647774677">085647774677</a><br><span>Booking Via WhatsApp</span></h6>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="item email">
-                <img src="assets/images/email-icon.png" alt="Gambar Ilustrasi" style="max-width: 52px;">
-                <h6>xxx@gmail.com<br><span>Email</span></h6>
+                <img src="assets/images/info-icon-01.png" alt="Gambar Ilustrasi" style="max-width: 52px;">
+                <h6 class="text-linked"><a href="https://maps.app.goo.gl/tf88pVETDHAjjVt78" target="_blank">Jl. Purwojati - Cilongok, Klapasawit Kidul, Klapasawit, Kec. Purwojati, Kabupaten Banyumas, Jawa Tengah 53175</a><br><span>Alamat</span></h6>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-12">
           <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.0908230582827!2d109.28013677528575!3d-7.455204173477224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655b239b9985a7%3A0xe0843b416a69233c!2sBENGKEL%20SANTOSA%20MOTOR!5e0!3m2!1sid!2sid!4v1716043334794!5m2!1sid!2sid" width="100%" height="500px" frameborder="0" style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3955.831542078685!2d109.119181!3d-7.483845999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMjknMDEuOSJTIDEwOcKwMDcnMDkuMSJF!5e0!3m2!1sid!2sid!4v1719842139343!5m2!1sid!2sid" width="100%" height="500px" frameborder="0" style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
