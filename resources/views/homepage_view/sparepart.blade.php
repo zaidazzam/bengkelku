@@ -27,7 +27,6 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">Gambar</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">Kategori</th>
                                     <th scope="col">Harga</th>
@@ -38,7 +37,6 @@
                                 @foreach ($sparepart as $index => $spare)
                                     <tr>
                                         <td><strong>{{ $index + 1 }}.</strong></td>
-                                        <td>Ini Gambar</td>
                                         <td>{{ $spare->name }}</td>
                                         <td>{{ $spare->category }}</td>
                                         <td>{{ 'Rp ' . number_format($spare->price, 0, ',', '.') }}</td>

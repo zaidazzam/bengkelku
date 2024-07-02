@@ -74,9 +74,10 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog $blog)
+    public function edit(Blog $id)
     {
-        //
+        $artikel = Blog::find($id);
+        return view('/home/artikel', compact('artikel'));
     }
 
     /**
@@ -86,7 +87,7 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Blog $id)
     {
         // Validasi input
         $request->validate([
@@ -97,7 +98,7 @@ class BlogController extends Controller
         ]);
 
         // Ambil blog yang ingin diupdate
-        $rekomendasi = Blog::findOrFail($id);
+        $rekomendasi = Blog::find($id);
 
         // Update data blog
         $rekomendasi->judul = $request->judul;

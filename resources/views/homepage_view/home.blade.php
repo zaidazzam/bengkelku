@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+<style>
+    .fa-solid-custom{
+        margin: auto;
+        padding-bottom: 8;
+        }
+</style>
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -135,7 +141,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-3 text-center">
                                         <span class="circle circle-sm bg-primary">
-                                            <i class="fa-solid fa-screwdriver-wrench text-white mb-0"></i>
+                                            <i class="fa-solid fa-solid-custom fa-screwdriver-wrench text-white mb-0"></i>
                                         </span>
                                     </div>
                                     <div class="col">

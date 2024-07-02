@@ -44,11 +44,12 @@
                                         <td>{{ $artikel->kategori }}</td>
                                         <td>{{ $artikel->deskripsi }}</td>
                                         <td>
-                                            <a href="" class="btn btn-primary text-white" data-bs-toggle="modal"
+                                            {{-- <a href="" class="btn btn-primary text-white" data-bs-toggle="modal"
                                                 data-bs-target="#modalEditArtikel" data-id="{{ $artikel->id }}"
                                                 data-name="{{ $artikel->judul }}" data-category="{{ $artikel->kategori }}"
-                                                data-deksripsi="{{ $artikel->deskripsi }}" data-image="{{ $artikel->image }}">
-                                                <i class="fas fa-edit"></i></a>
+                                                data-deksripsi="{{ $artikel->deskripsi }}"
+                                                data-image="{{ $artikel->image }}">
+                                                <i class="fas fa-edit"></i></a> --}}
                                             <form action="{{ route('artikel.destroy', $artikel->id) }}" method="post"
                                                 class="d-inline">
                                                 @csrf
@@ -117,48 +118,5 @@
     </div>
 
     {{-- Modal Edit artikel --}}
-<div class="modal fade" id="modalEditArtikel" tabindex="-1" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Edit Artikel</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form action="{{ route('artikel.update', ['artikel' => $artikel->id]) }}" method="post"
-                id="editFormArtikel" enctype="multipart/form-data">
-                @csrf
-                @method('PUT')
-                <div class="mb-3">
-                    <label for="judulEdit" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="judulEdit" name="judul"
-                        value="{{ $artikel->judul }}">
-                </div>
-                <div class="mb-3">
-                    <label for="kategoriEdit" class="form-label">Kategori</label>
-                    <select class="form-select" id="kategoriEdit" name="kategori">
-                        <option value="artikel" {{ $artikel->kategori == 'artikel' ? 'selected' : '' }}>Artikel
-                        </option>
-                        <option value="tips" {{ $artikel->kategori == 'tips' ? 'selected' : '' }}>Tips</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="deskripsiEdit" class="form-label">Deskripsi</label>
-                    <textarea class="form-control" id="deskripsiEdit" name="deskripsi">{{ $artikel->deskripsi }}</textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="imageEdit" class="form-label">Gambar</label>
-                    <input type="file" class="form-control" id="imageEdit" name="image">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </div>
 
-    </div>
-</div>
-</div>
 @endsection

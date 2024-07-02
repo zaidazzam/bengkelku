@@ -29,129 +29,58 @@
             <div class="row properties-box">
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 service">
                     <div class="item">
-                        <a href="#"><img src="assets/images/mobil.png" alt=""></a>
+                        <a href=""><img src="assets/images/motor.png" alt=""></a>
                         <span class="category">Service</span>
-                        <span class="category bg-primary-subtle">Mobil</span>
+                        <span class="category bg-primary-subtle">Standart</span>
                         <h6>Rp 900.000</h6>
-                        <h4><a href="#">Service Mobil Manual</a></h4>
+                        <h4><a href="#">Service Motor Manual</a></h4>
                         <p class="mb-4 border-bottom pb-3">Start From Rp 90.000. Garansi bla bla</p>
                         <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
+                            <a href="{{ route('login') }}">Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 service">
                     <div class="item">
-                        <a href="#"><img src="assets/images/mobil.png" alt=""></a>
+                        <a href=""><img src="assets/images/motor.png" alt=""></a>
                         <span class="category">Service</span>
-                        <span class="category bg-primary-subtle">Mobil</span>
+                        <span class="category bg-primary-subtle">Full Service</span>
                         <h6>Rp 1.900.000</h6>
-                        <h4><a href="#">Service Mobil Matic</a></h4>
+                        <h4><a href="#">Service Motor Matic</a></h4>
                         <p class="mb-4 border-bottom pb-3">Start From Rp 1.900.000. Garansi bla bla</p>
                         <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
+                            <a href="{{ route('login') }}">Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 service">
                     <div class="item">
-                        <a href="#"><img src="assets/images/motor.png" alt=""></a>
+                        <a href=""><img src="assets/images/motor.png" alt=""></a>
                         <span class="category">Service</span>
-                        <span class="category bg-primary-subtle">Motor</span>
+                        <span class="category bg-primary-subtle">Premium</span>
                         <h6>Rp 200.000</h6>
                         <h4><a href="#">Service Mobil Manual</a></h4>
                         <p class="mb-4 border-bottom pb-3">Start From Rp 90.000. Garansi bla bla</p>
                         <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 service">
-                    <div class="item">
-                        <a href="#"><img src="assets/images/motor.png" alt=""></a>
-                        <span class="category">Service</span>
-                        <span class="category bg-primary-subtle">Motor</span>
-                        <h6>Rp 600.000</h6>
-                        <h4><a href="#">Service Mobil Matic</a></h4>
-                        <p class="mb-4 border-bottom pb-3">Start From Rp 90.000. Garansi bla bla</p>
-                        <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
+                            <a href="{{ route('login') }}">Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
 
+                @foreach ($sparepart as $index => $sparepart)
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 sparepart">
                     <div class="item">
-                        <a href="#"><img src="assets/images/sparepart.png" alt=""></a>
-                        <span class="category">Sparepart</span>
-                        <h6>Rp 200.000</h6>
-                        <h4><a href="#">Oli</a></h4>
-                        <p class="mb-4 border-bottom pb-3">xxxxx</p>
+                        <a href="{{ route('login') }}"><img src="assets/images/sparepart.png" alt=""></a>
+                        <span class="category">{{$sparepart->category}}</span>
+                        <h6>{{ 'Rp ' . number_format($sparepart->price, 0, ',', '.') }}</h6>
+                        <h4><a href="{{ route('login') }}">{{$sparepart->name}}</a></h4>
                         <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
+                            <a href="{{ route('login') }}">Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 sparepart">
-                    <div class="item">
-                        <a href="#"><img src="assets/images/sparepart.png" alt=""></a>
-                        <span class="category">Sparepart</span>
-                        <h6>Rp 200.000</h6>
-                        <h4><a href="#">Oli</a></h4>
-                        <p class="mb-4 border-bottom pb-3">xxxxx</p>
-                        <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 sparepart">
-                    <div class="item">
-                        <a href="#"><img src="assets/images/sparepart.png" alt=""></a>
-                        <span class="category">Sparepart</span>
-                        <h6>Rp 200.000</h6>
-                        <h4><a href="#">Oli</a></h4>
-                        <p class="mb-4 border-bottom pb-3">xxxxx</p>
-                        <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 sparepart">
-                    <div class="item">
-                        <a href="#"><img src="assets/images/sparepart.png" alt=""></a>
-                        <span class="category">Sparepart</span>
-                        <h6>Rp 200.000</h6>
-                        <h4><a href="#">Oli</a></h4>
-                        <p class="mb-4 border-bottom pb-3">xxxxx</p>
-                        <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 sparepart">
-                    <div class="item">
-                        <a href="#"><img src="assets/images/sparepart.png" alt=""></a>
-                        <span class="category">Sparepart</span>
-                        <h6>Rp 200.000</h6>
-                        <h4><a href="#">Oli</a></h4>
-                        <p class="mb-4 border-bottom pb-3">xxxxx</p>
-                        <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 sparepart">
-                    <div class="item">
-                        <a href="#"><img src="assets/images/sparepart.png" alt=""></a>
-                        <span class="category">Sparepart</span>
-                        <h6>Rp 200.000</h6>
-                        <h4><a href="#">Oli</a></h4>
-                        <p class="mb-4 border-bottom pb-3">xxxxx</p>
-                        <div class="main-button">
-                            <a href="login.html">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [App\Http\Controllers\Auth\AuthController::class, 'index_login'])->name('login');
     Route::post('/login', [App\Http\Controllers\Auth\AuthController::class, 'login']);
     Route::get('/', [App\Http\Controllers\GuestController::class, 'index']);
-    Route::get('/harga', [App\Http\Controllers\GuestController::class, 'harga'])->name('harga');
+    Route::get('/harga', [App\Http\Controllers\GuestController::class, 'sparepart'])->name('harga');
     Route::get('/artikel-tips', [App\Http\Controllers\GuestController::class, 'artikelTips'])->name('artikel-tips');
     Route::get('/artikel-tips/{id}', [App\Http\Controllers\GuestController::class, 'artikelDetail'])->name('artikel-detail');
     Route::get('/kontak', [App\Http\Controllers\GuestController::class, 'contact'])->name('contact');
