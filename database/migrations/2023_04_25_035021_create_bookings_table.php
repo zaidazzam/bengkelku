@@ -23,9 +23,8 @@ class CreateBookingsTable extends Migration
             $table->string('license_plate');
             $table->date('date');
             $table->text('notes')->nullable();
-            $table->string('ammount');
+            $table->decimal('ammount', 10, 2);  // Kolom 'ammount' dengan tipe decimal
             $table->enum('status', ['stand_by', 'on_process', 'done'])->default('stand_by');
-            $table->foreignId('spareparts_id')->nullable()->constrained('spareparts')->onDelete('cascade');
             $table->timestamps();
         });
     }

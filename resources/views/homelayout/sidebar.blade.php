@@ -12,16 +12,26 @@
 
         <!-- Navigation items -->
         <ul class="navbar-nav flex-fill w-100 mb-2">
+            <p class="text-muted nav-heading mt-4 mb-1">
+                <span>Dashboard</span>
+            </p>
             <li class="nav-item w-100">
                 <a class="nav-link {{ request()->is('/home') ? 'active' : '' }}" href="{{ route('home') }}">
                     <i class="fe fe-home fe-16"></i>
-                    <span class="ml-3 item-text">Dashboard</span>
+                    <span class="ml-3 item-text">Dashboard Booking</span>
+                </a>
+            </li>
+            @if (Auth::user()->role_id == 1)
+            <li class="nav-item w-100">
+                <a class="nav-link {{ request()->is('/home1') ? 'active' : '' }}" href="{{ route('home1') }}">
+                    <i class="fe fe-dollar-sign fe-16"></i>
+                    <span class="ml-3 item-text">Dashboard penjualan</span>
                 </a>
             </li>
             <p class="text-muted nav-heading mt-4 mb-1">
                 <span>Pembayaran</span>
             </p>
-            @if (Auth::user()->role_id == 1)
+
                 <li class="nav-item w-100">
                     <a class="nav-link {{ request()->is('home/invoice') ? 'active' : '' }}"
                         href="{{ route('home.invoice') }}">

@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
 
     // Home and Resource Routes
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home1', [App\Http\Controllers\DashboardController::class, 'index'])->name('home1');
     // Home Routes
     Route::get('/home/orderlist', [App\Http\Controllers\HomeController::class, 'orderlist'])->name('home.orderlist');
     Route::get('/home/sparepart', [App\Http\Controllers\HomeController::class, 'sparepart'])->name('home.sparepart');

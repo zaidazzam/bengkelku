@@ -110,30 +110,31 @@ class BookingController extends Controller
         return redirect('/home/orderlist')->with('success', 'Booking updated!');
     }
 
-    public function updateSparepart(Request $request, $sparepart)
+    public function updateSparepart(Request $request) // Hilangkan parameter $sparepart
     {
         $request->validate([
-            'sparepart_id' => 'required',
-            'booking_id' => 'required',
+            'sparepart_id' => 'required|array',
+            'booking_id' => 'required|exists:bookings,id',
         ]);
-        // dd($request->get('sparepart_id'));
 
-        if (!empty($request->get('sparepart_id'))) {
-            $booking = Booking::findOrfail($request->get('booking_id'));
-            $sparepart_ids = $request->get('sparepart_id');
+        $booking = Booking::findOrFail($request->booking_id);
+        $sparepartIds = $request->sparepart_id;
 
-            foreach ($sparepart_ids as $sparepart_id) {
-                $sparepart = Sparepart::findOrFail($sparepart_id);
-                $total_price = intval($booking->ammount) + intval($sparepart->price);
-                $booking->ammount = $total_price;
-                $booking->spareparts_id = $sparepart_id;
-                $booking->save();
-                $booking->spareparts()->attach($sparepart_id);
-            }
-            return redirect('/home/orderlist')->with('success', 'Spareparts have been added to the booking.');
-        } else {
-            return redirect('/home/orderlist')->with('error', 'Please select at least one sparepart.');
+        // Hitung total harga dengan benar
+        $totalAmmount = $booking->ammount;
+        foreach ($sparepartIds as $sparepartId) {
+            $sparepart = Sparepart::findOrFail($sparepartId);
+            $totalAmmount += $sparepart->price;
         }
+
+        // Update harga total pemesanan
+        $booking->ammount = $totalAmmount;
+        $booking->save();
+
+        // Gunakan model pivot untuk menyimpan hubungan many-to-many
+        $booking->spareparts()->attach($sparepartIds);
+
+        return redirect('/home/orderlist')->with('success', 'Suku cadang telah ditambahkan ke pemesanan.');
     }
 
     public function invoice(Booking $booking)
